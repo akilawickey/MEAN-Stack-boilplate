@@ -31,6 +31,8 @@ app.use((err, req, res, next) => {
   }
 });
 
+app.get("/", (req, res) => res.send("App running "));
+
 console.log(`Environment : ${process.env.NODE_ENV}`);
 // start server
 app.listen(process.env.PORT, () =>
